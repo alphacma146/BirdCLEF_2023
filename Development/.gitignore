@@ -1,0 +1,9 @@
+Data/test_soundscapes
+Data/train_audio
+Data/eBird_Taxonomy_v2021.csv
+Data/sample_submission.csv
+Data/scored_birds.json
+Data/test.csv
+Data/train_metadata.csv
+Data/digit-recognizer
+Data/melspectrogram
