@@ -1,5 +1,6 @@
 # Standard lib
 from pathlib import Path
+import argparse
 # Third party
 import torch
 import torch.nn as nn
@@ -7,7 +8,7 @@ import torchaudio  # If Linux it's Sox, if Windows it's SoundFile you need
 from torchvision.utils import save_image
 from tqdm import tqdm
 
-IMAGE_PRODUCT = True
+
 N_FFT = 2048
 HOP_LEN = 1024
 
@@ -210,8 +211,17 @@ def densenet264():
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-i",
+        "--image",
+        action="store_true",
+        help="Create melspectrogram image"
+    )
+    args = parser.parse_args()
+
     output_folder = Path("Data\\melspectrogram")
-    if IMAGE_PRODUCT:
+    if args.image:
         input_folder = Path("Data\\train_audio")
         for data_path in tqdm(input_folder.rglob("*.ogg")):
             output_path = output_folder / data_path.parent.name
