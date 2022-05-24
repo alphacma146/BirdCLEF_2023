@@ -11,6 +11,8 @@ from tqdm import tqdm
 
 N_FFT = 2048
 HOP_LEN = 1024
+BATCH = 100
+EPOCH = 10
 
 
 def create_image(img_path: Path, save_path: Path):
@@ -228,3 +230,7 @@ if __name__ == "__main__":
             if not output_path.exists():
                 output_path.mkdir(parents=True)
             create_image(data_path, output_path / (data_path.stem + ".png"))
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    model = densenet169().to(device)
+    print(type(model))
