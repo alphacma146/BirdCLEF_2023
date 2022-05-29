@@ -108,9 +108,9 @@ plt.title("wave form")
 plt.plot(audio.t().numpy())
 plt.show()
 # メルスペクトログラム
-plt.figure(figsize=(12, 5))
+plt.figure(figsize=(12, 7))
 plt.title("mel spectrogram")
-plt.imshow(spectrogram.detach().numpy(), cmap="hsv", aspect=12)
+plt.imshow(spectrogram.t().numpy(), cmap="hsv", aspect=0.01)
 # %%
 # audio
 """ display(display.Audio(waveform, rate=sample_rate)) """

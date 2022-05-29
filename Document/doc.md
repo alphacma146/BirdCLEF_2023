@@ -6,9 +6,9 @@
     - [2-1. train_metadata.csv](#2-1-train_metadatacsv)
     - [2-2. 緯度経度プロット](#2-2-緯度経度プロット)
     - [2-3. rating の分布](#2-3-rating-の分布)
-    - [2-4. データラベルの worcloud](#2-4-データラベルの-worcloud)
+    - [2-4. データラベルの wordcloud](#2-4-データラベルの-wordcloud)
     - [2-5. test.ogg の波形](#2-5-testogg-の波形)
-    - [2-6. メルスペクトログラム](#2-6-メルスペクトログラム)
+    - [2-6. test.ogg をメルスペクトログラムに変換](#2-6-testogg-をメルスペクトログラムに変換)
   - [3. フロー](#3-フロー)
 
 ## 1. Abstract
@@ -20,6 +20,8 @@ https://www.kaggle.com/competitions/birdclef-2022
 > The Cornell Lab of Ornithology's K. Lisa Yang Center for Conservation Bioacoustics (KLY-CCB) develops and applies innovative conservation technologies across multiple ecological scales to inspire and inform the conservation of wildlife and habitats. KLY-CCB does this by collecting and interpreting sounds in nature and they've joined forces with Google Bioacoustics Group, LifeCLEF, Listening Observatory for Hawaiian Ecosystems (LOHE) Bioacoustics Lab at the University of Hawai'i at Hilo, and Xeno-Canto for this competition.
 > In this competition, you’ll use your machine learning skills to identify bird species by sound. Specifically, you'll develop a model that can process continuous audio data and then acoustically recognize the species. The best entries will be able to train reliable classifiers with limited training data.
 > If successful, you'll help advance the science of bioacoustics and support ongoing research to protect endangered Hawaiian birds. Thanks to your innovations, it will be easier for researchers and conservation practitioners to accurately survey population trends. They'll be able to regularly and more effectively evaluate threats and adjust their conservation actions.
+
+<div style="page-break-before:always"></div>
 
 ## 2. データ
 
@@ -38,6 +40,8 @@ https://www.kaggle.com/competitions/birdclef-2022
 -   `rating`
     0.0~5.0 の間を取る。Xeno-canto 基準の品質とバックグラウンドで鳴いてる鳥の種類数が影響して決まる。5.0 は良、1.0 は悪。0 は未評価。
 
+<div style="page-break-before:always"></div>
+
 ### 2-2. 緯度経度プロット
 
 @import "src\distribution.html"
@@ -46,7 +50,9 @@ https://www.kaggle.com/competitions/birdclef-2022
 
 @import "src\rating.html"
 
-### 2-4. データラベルの worcloud
+<div style="page-break-before:always"></div>
+
+### 2-4. データラベルの wordcloud
 
 Barn Owl と Owl Barn がいる。ちなみにこれはメンフクロウ。
 
@@ -56,7 +62,9 @@ Barn Owl と Owl Barn がいる。ちなみにこれはメンフクロウ。
 
 @import "src\waveform.png"
 
-### 2-6. メルスペクトログラム
+### 2-6. test.ogg をメルスペクトログラムに変換
+
+音声データを短時間フーリエ変換(Short Time Fourier Transform:STFT)して画像としたものの振れ幅スペクトルにメルフィルターバンクを適用させメル尺度に変換したもの。
 
 @import "src\melspectrogram.png"
 
