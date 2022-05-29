@@ -1,0 +1,26 @@
+[Data]
+  ├ .gitkeep
+  ├ [digit-recognizer]
+  │  ├ result_submission.csv
+  │  ├ sample_submission.csv
+  │  ├ test.csv
+  │  └ train.csv
+  ├ eBird_Taxonomy_v2021.csv
+  ├ [melspectrogram]
+  │  ├ [afrsil1]
+  │  │  ├ XC125458.ogg
+  │  │  ├ XC175522.ogg
+  │  │  ├ XC177993.ogg
+  │  │  ...
+  ├ sample_submission.csv
+  ├ scored_birds.json
+  ├ test.csv
+  ├ [test_soundscapes]
+  │  └ soundscape_453028782.ogg
+  ├ [train_audio]
+  │  ├ [afrsil1]
+  │  │  ├ XC125458.ogg
+  │  │  ├ XC175522.ogg
+  │  │  ├ XC177993.ogg
+  │  │  ...
+  └ train_metadata.csv
